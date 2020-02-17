@@ -1,8 +1,11 @@
 import React from "react";
+import dotenv from "dotenv";
 
+dotenv.config();
 export default function Main({ history }) {
   const onClick = () => {
-    history.push("/about");
+    // history.push("/about");
+    console.log(process.env.REACT_APP_KEY);
   };
 
   return (

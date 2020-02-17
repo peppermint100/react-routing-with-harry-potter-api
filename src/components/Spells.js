@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Spell from "./Spell";
 import { Link } from "react-router-dom";
+import dotenv from "dotenv";
 
-const API_KEY = "$2a$10$cXp57352e.EAGfPrFPCvm.kMSnfWNHsv2S3JlMYOTujwv9c/V65zG";
+dotenv.config();
+const API_KEY = process.env.REACT_APP_API_KEY;
 const URL = `https://www.potterapi.com/v1/spells?key=${API_KEY}`;
 
 export default function Spells() {
